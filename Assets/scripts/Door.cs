@@ -74,4 +74,9 @@ public class Door : MonoBehaviour, IActivate
 
         Deactivate();
     }
+
+    public void ToggleGlitch()
+    {
+        throw new System.NotImplementedException();
+    }
 }
