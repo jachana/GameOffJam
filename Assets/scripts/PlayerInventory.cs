@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,6 +30,6 @@ public class PlayerInventory : MonoBehaviour
 
     public void FoundItem(MyFakeItems item_id)
     {
-        _requiered_item_list[item_id]= true;
+        _requiered_item_list[item_id] = true;
     }
 }

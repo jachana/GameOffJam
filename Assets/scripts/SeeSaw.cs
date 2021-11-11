@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SeeSaw : MonoBehaviour, IGlitchable
 {
@@ -15,8 +13,8 @@ public class SeeSaw : MonoBehaviour, IGlitchable
     {
         is_glitching = !is_glitching;
         float offset_x = glitch_offset * platform.localScale.x / 2 * Mathf.Cos(platform.localRotation.eulerAngles.z * Mathf.Deg2Rad);
-        float offset_y= glitch_offset * platform.localScale.x / 2 * Mathf.Sin(platform.localRotation.eulerAngles.z * Mathf.Deg2Rad);
-        float offset_z= 0;
+        float offset_y = glitch_offset * platform.localScale.x / 2 * Mathf.Sin(platform.localRotation.eulerAngles.z * Mathf.Deg2Rad);
+        float offset_z = 0;
 
         Vector3 offset = new Vector3(offset_x, offset_y, offset_z);
 

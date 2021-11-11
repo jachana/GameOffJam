@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
 
     public enum FacingDirection
     {
-        left = -1, 
+        left = -1,
         right = 1
     }
 
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
 
-        if(patrol_points.Count == 0)
+        if (patrol_points.Count == 0)
         {
             PatrolPoint currentPoint = new PatrolPoint();
             currentPoint.x_destination = transform.position.x;
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
 
     private void FaceDirection(Vector2 direction)
     {
-        if(direction.x > 0)
+        if (direction.x > 0)
         {
             sprite.flipX = false;
             field_of_view.SetAimDirecion(Vector2.right);
@@ -107,7 +107,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag.Equals("Object"))
+        if (collision.gameObject.tag.Equals("Object"))
         {
             NextPatrolPoint();
         }
