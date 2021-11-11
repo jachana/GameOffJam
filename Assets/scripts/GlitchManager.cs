@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class GlitchManager : MonoBehaviour
@@ -8,7 +7,7 @@ public class GlitchManager : MonoBehaviour
     List<IGlitchable> glitch_list = new List<IGlitchable>();
     private static GlitchManager _instance;
     public static GlitchManager Instance { get { return _instance; } }
-    float timer= 2;
+    float timer = 2;
     float normal_time = 2;
     float glitch_time = 2;
     bool is_glitching = false;
@@ -34,7 +33,6 @@ public class GlitchManager : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            Debug.Log("NOW: " + glitch_list.Count);
             foreach (IGlitchable glitch in glitch_list)
             {
                 glitch.ToggleGlitch();

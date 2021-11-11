@@ -35,9 +35,4 @@ public abstract class PlatformBase : MonoBehaviour, IActivate
     {
         _is_active = !_is_active;
     }
-
-    public void ToggleGlitch()
-    {
-        throw new System.NotImplementedException();
-    }
 }
