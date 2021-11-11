@@ -22,35 +22,42 @@ public class PlayerInteractions : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.E))
             {
-                interactableObject.GetComponent<IInteractable>().ManualInteract();
+                interactableObject.GetComponent<IInteractable>().ManualInteract(this);
             }
-            interactableObject.GetComponent<IInteractable>().AutoInteract();
+            interactableObject.GetComponent<IInteractable>().AutoInteract(this);
 
         }
     }
 
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        //if the object is not already in the list
-        if (otherCollider.GetComponent<IInteractable>() != null &&
-            !_interactables_list.Contains(otherCollider))
-        {
-            //add the object to the list
-            _interactables_list.Add(otherCollider);
-        }
+        AddColiderToList(otherCollider);
     }
 
     //called when something exits the trigger
     void OnTriggerExit2D(Collider2D otherCollider)
     {
-        //if the object is in the list
+        RemoveColliderToList(otherCollider);
+    }
+
+    private void RemoveColliderToList(Collider2D otherCollider)
+    {
         if (otherCollider.GetComponent<IInteractable>() != null &&
             _interactables_list.Contains(otherCollider))
         {
-            //remove it from the list
             _interactables_list.Remove(otherCollider);
         }
     }
+
+    private void AddColiderToList(Collider2D otherCollider)
+    {
+        if (otherCollider.GetComponent<IInteractable>() != null &&
+            !_interactables_list.Contains(otherCollider))
+        {
+            _interactables_list.Add(otherCollider);
+        }
+    }
+
 
 
 }

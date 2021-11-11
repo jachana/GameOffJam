@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SeeSaw : MonoBehaviour, IGlitchable
+public class PivotSeeSaw : MonoBehaviour, IGlitchable
 {
     [SerializeField]
     float glitch_offset;

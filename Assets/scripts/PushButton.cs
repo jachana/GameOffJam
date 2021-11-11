@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,13 +15,13 @@ public class PushButton : MonoBehaviour, IInteractable
         GetComponent<SpriteRenderer>().color = Color.red;
     }
 
-    public void ManualInteract()
+    public void ManualInteract(PlayerInteractions interactor)
     {
         CallOnInteract.Invoke();
         StartCoroutine(ChangeVisualAspect());
     }
 
-    public void AutoInteract()
+    public void AutoInteract(PlayerInteractions interactor)
     {
         //highlight?
     }

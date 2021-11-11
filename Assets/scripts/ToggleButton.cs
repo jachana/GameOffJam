@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -30,7 +28,7 @@ public class ToggleButton : MonoBehaviour, IInteractable
         transform.parent.transform.rotation = Quaternion.Euler(0, 0, 45f);
     }
 
-    public void ManualInteract()
+    public void ManualInteract(PlayerInteractions interactor)
     {
         if (!_is_active)
         {
@@ -43,7 +41,7 @@ public class ToggleButton : MonoBehaviour, IInteractable
         _is_active = !_is_active;
     }
 
-    public void AutoInteract()
+    public void AutoInteract(PlayerInteractions interactor)
     {
         //highlight?
     }
