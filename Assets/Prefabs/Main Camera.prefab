@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7707948685429965130}
   - component: {fileID: 7707948685429965128}
   - component: {fileID: 7707948685429965131}
+  - component: {fileID: 8865019132053040527}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -100,3 +101,20 @@ MonoBehaviour:
   smooth_time: 0.3
   velocity: {x: 0, y: 0, z: 0}
   offset: {x: -3, y: 5, z: 0}
+--- !u!114 &8865019132053040527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707948685429965129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22fd8bee169070844b26bf0aaed95e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displacementMap: {fileID: 2800000, guid: 3e4204f6851770f489eaf787ba12839b, type: 3}
+  Shader: {fileID: 4800000, guid: eaef9fd0b1dea8847923bf6a3b7123ee, type: 3}
+  intensity: 0.286
+  flipIntensity: 0.33
+  colorIntensity: 0.297

@@ -10,7 +10,7 @@ public class SeeSaw : MonoBehaviour, IGlitchable
     Transform pivot, platform;
     [SerializeField]
     bool is_glitching = false;
-    
+    SpriteRenderer sprite;
     public void ToggleGlitch()
     {
         is_glitching = !is_glitching;
@@ -22,10 +22,13 @@ public class SeeSaw : MonoBehaviour, IGlitchable
 
         if (is_glitching)
         {
+            sprite.color = Color.red;
             pivot.transform.position += offset;
         }
         else
         {
+            sprite.color = Color.white;
+
             pivot.transform.position -= offset;
         }
 
@@ -35,5 +38,6 @@ public class SeeSaw : MonoBehaviour, IGlitchable
     void Start()
     {
         GlitchManager.Instance.AddGlitchableToList(this);
+        sprite = pivot.GetComponent<SpriteRenderer>();
     }
 }

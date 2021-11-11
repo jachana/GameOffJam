@@ -34,7 +34,6 @@ public class GlitchManager : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            Debug.Log("NOW: " + glitch_list.Count);
             foreach (IGlitchable glitch in glitch_list)
             {
                 glitch.ToggleGlitch();
