@@ -1,5 +1,5 @@
 public interface IInteractable
 {
-    void ManualInteract();
-    void AutoInteract();
+    void ManualInteract(PlayerInteractions interactor);
+    void AutoInteract(PlayerInteractions interactor);
 }

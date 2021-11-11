@@ -57,14 +57,12 @@ public class GlitchEffect : MonoBehaviour, IGlitchable
 			 used_flip_intensity = flipIntensity;
 			 used_color_intensity = colorIntensity;
 			 used_intensity = intensity;
-			Debug.Log("yes");
 		}
 		else
 		{
 			 used_flip_intensity = 0;
 			 used_color_intensity =0;
 			 used_intensity = 0;
-			Debug.Log("no");
 
 		}
 
