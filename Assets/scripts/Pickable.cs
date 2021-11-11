@@ -29,7 +29,6 @@ public class Pickable : MonoBehaviour, IInteractable
 
     public void AutoInteract(PlayerInteractions interactor)
     {
-        Debug.Log("touched player");
     }
     void Start()
     {
