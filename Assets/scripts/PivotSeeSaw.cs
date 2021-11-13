@@ -1,41 +1,34 @@
 ﻿using UnityEngine;
 
-public class PivotSeeSaw : MonoBehaviour, IGlitchable
+public class PivotSeeSaw : SeeSaw
 {
     [SerializeField]
     float glitch_offset;
-    [SerializeField]
-    Transform pivot, platform;
-    [SerializeField]
-    bool is_glitching = false;
-    SpriteRenderer sprite;
-    public void ToggleGlitch()
+    protected override void EndGlitch()
     {
-        is_glitching = !is_glitching;
-        float offset_x = glitch_offset * platform.localScale.x / 2 * Mathf.Cos(platform.localRotation.eulerAngles.z * Mathf.Deg2Rad);
-        float offset_y = glitch_offset * platform.localScale.x / 2 * Mathf.Sin(platform.localRotation.eulerAngles.z * Mathf.Deg2Rad);
-        float offset_z = 0;
+        Vector3 offset = CalculateOffset();
 
-        Vector3 offset = new Vector3(offset_x, offset_y, offset_z);
-
-        if (is_glitching)
-        {
-            sprite.color = Color.red;
-            pivot.transform.position += offset;
-        }
-        else
-        {
-            sprite.color = Color.white;
-
-            pivot.transform.position -= offset;
-        }
-
-
+        _sprite_renderer.color = Color.white;
+        _pivot.transform.position -= offset;
     }
 
-    void Start()
+    protected override SpriteRenderer GetSpriteRenderer()
     {
-        GlitchManager.Instance.AddGlitchableToList(this);
-        sprite = pivot.GetComponent<SpriteRenderer>();
+        return _pivot.GetComponent<SpriteRenderer>();
+    }
+
+    protected override void StartGlitch()
+    {
+        Vector3 offset = CalculateOffset();
+        _sprite_renderer.color = Color.red;
+        _pivot.transform.position += offset;
+    }
+
+    private Vector3 CalculateOffset()
+    {
+        float offset_x = glitch_offset * _platform.localScale.x * Mathf.Cos(_platform.localRotation.eulerAngles.z * Mathf.Deg2Rad);
+        float offset_y = glitch_offset * _platform.localScale.x * Mathf.Sin(_platform.localRotation.eulerAngles.z * Mathf.Deg2Rad);
+        float offset_z = 0;
+        return new Vector3(offset_x, offset_y, offset_z);
     }
 }

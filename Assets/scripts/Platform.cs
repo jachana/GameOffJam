@@ -8,20 +8,23 @@ public class Platform : PlatformBase
 
     public override void Diminish()
     {
-        throw new System.NotImplementedException();
+    //    throw new System.NotImplementedException();
     }
 
     public override void Enhance()
     {
-        throw new System.NotImplementedException();
+    //    throw new System.NotImplementedException();
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        col.transform.parent = transform;
-        if (col.gameObject.tag == "Pushable" && !col.gameObject.GetComponent<Platform>())
+        if (!col.gameObject.GetComponent<Platform>())
         {
-            col.gameObject.AddComponent<Platform>();
+            col.transform.parent = transform;
+            if (col.gameObject.tag == "Pushable")
+            {
+                col.gameObject.AddComponent<Platform>();
+            }
         }
     }
 
