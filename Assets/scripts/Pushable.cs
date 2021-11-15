@@ -9,6 +9,7 @@ public class Pushable : MonoBehaviour, IGlitchable
     private bool is_glitching;
     private Rigidbody2D rigid_body;
     private SpriteRenderer sprite_renderer;
+    private Vector2 initial_position;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class Pushable : MonoBehaviour, IGlitchable
 
         rigid_body = GetComponent<Rigidbody2D>();
         sprite_renderer = GetComponent<SpriteRenderer>();
+
+        initial_position = transform.position;
     }
 
     public void ToggleGlitch()
@@ -49,5 +52,18 @@ public class Pushable : MonoBehaviour, IGlitchable
                 player_rigid_body.velocity = bounce_speed;
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Deadly"))
+        {
+            ResetPosition();
+        }
+    }
+
+    private void ResetPosition()
+    {
+        transform.position = initial_position;
     }
 }
