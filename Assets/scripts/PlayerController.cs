@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
             _rigidbody.AddForce(new Vector2(0, _jump_force), ForceMode2D.Impulse);
         }
     }
-    void OnTriggerEnter2D(Collider2D otherCollider)
+    void OnTriggerStay2D(Collider2D otherCollider)
     {
         if (otherCollider.gameObject.GetComponent<Platform>())
         {
