@@ -5,6 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    private static LevelManager _instance;
+    public static LevelManager Instance { get { return _instance; } }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
 
     public void ResetLevel()
     {
@@ -16,7 +30,10 @@ public class LevelManager : MonoBehaviour
     public void NextLevel()
     {
         Scene current_scene = SceneManager.GetActiveScene();
-        int next_scene_index = (current_scene.buildIndex + 1) % SceneManager.sceneCount;
+        Debug.Log(current_scene.name);
+        int next_scene_index = (current_scene.buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
+        Debug.Log(current_scene.buildIndex + " " + 1 + "%" + SceneManager.sceneCountInBuildSettings);
+        Debug.Log(next_scene_index);
         SceneManager.LoadScene(next_scene_index);
     }
 }
