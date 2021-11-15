@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tutorial-Jump-Scene.unity
-    guid: 0be6647cc5531c54c8c374ed96962df2
+    path: Assets/Scenes/Levels/Complete movement tutorial.unity
+    guid: d6d71b00054d66f409a39ec269138560
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Levels/SeeSaw Tutorial.unity
+    guid: f49f28dceccc3d94cb1ca8d7d75fa7cc
   m_configObjects: {}
