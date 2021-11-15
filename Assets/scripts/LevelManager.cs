@@ -30,10 +30,7 @@ public class LevelManager : MonoBehaviour
     public void NextLevel()
     {
         Scene current_scene = SceneManager.GetActiveScene();
-        Debug.Log(current_scene.name);
         int next_scene_index = (current_scene.buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
-        Debug.Log(current_scene.buildIndex + " " + 1 + "%" + SceneManager.sceneCountInBuildSettings);
-        Debug.Log(next_scene_index);
         SceneManager.LoadScene(next_scene_index);
     }
 }
