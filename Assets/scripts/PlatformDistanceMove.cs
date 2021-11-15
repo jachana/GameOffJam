@@ -19,7 +19,7 @@ public class PlatformDistanceMove : Platform
         if (_is_active)
         {
             _clock += Time.deltaTime * _speed;
-            transform.position = Vector3.Lerp(transform.position, _initial_position + _movement_vector * Mathf.Sin(_clock), .5f);
+            transform.position = Vector3.Lerp(transform.position, _initial_position + _movement_vector * Mathf.Sin(_clock + _offset*Mathf.PI), .5f);
         }
     }
 
