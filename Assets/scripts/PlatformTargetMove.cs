@@ -8,12 +8,10 @@ public class PlatformTargetMove : Platform
 
     public override void Diminish()
     {
-        _target_position = _starting_position;
     }
 
     public override void Enhance()
     {
-        _target_position = _desired_position.position;
     }
 
     void Start()
@@ -26,7 +24,12 @@ public class PlatformTargetMove : Platform
     {
         if (_is_active)
         {
-            transform.position = Vector3.Lerp(transform.position, _target_position, Time.deltaTime * _speed);
+            _target_position = _desired_position.position;
         }
+        else
+        {
+            _target_position = _starting_position;
+        }
+        transform.position = Vector3.Lerp(transform.position, _target_position, Time.deltaTime * _speed);
     }
 }
