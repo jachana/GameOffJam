@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Complete movement tutorial.unity
     guid: d6d71b00054d66f409a39ec269138560
   - enabled: 1
-    path: Assets/Scenes/Levels/SeeSaw Tutorial.unity
+    path: Assets/Scenes/SeeSaw Tutorial.unity
     guid: f49f28dceccc3d94cb1ca8d7d75fa7cc
   m_configObjects: {}
