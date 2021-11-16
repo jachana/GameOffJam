@@ -366,6 +366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 524294557998301282, guid: 5b2e6755512c8ad46afdd6ae83604108, type: 3}
+      propertyPath: time_to_fade
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 524294557998301283, guid: 5b2e6755512c8ad46afdd6ae83604108, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -408,6 +412,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 524294557998301283, guid: 5b2e6755512c8ad46afdd6ae83604108, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 524294557998301284, guid: 5b2e6755512c8ad46afdd6ae83604108, type: 3}
+      propertyPath: Mute
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
