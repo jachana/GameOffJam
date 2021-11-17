@@ -14,7 +14,7 @@ public class FollowTarget : MonoBehaviour
     void Update()
     {
         // Define a target position above and behind the target transform
-        Vector3 targetPosition = target.TransformPoint(new Vector3(-3, 3, -10));
+        Vector3 targetPosition = target.position + offset;//new Vector3(-3, 3, -10));
 
         // Smoothly move the camera towards that target position
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smooth_time);
