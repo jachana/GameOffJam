@@ -15,16 +15,14 @@ public class Pushable : MonoBehaviour, IGlitchable
     void Start()
     {
         GlitchManager.Instance.AddGlitchableToList(this);
-
         rigid_body = GetComponent<Rigidbody2D>();
         sprite_renderer = GetComponent<SpriteRenderer>();
-
         initial_position = transform.position;
     }
 
-    public void ToggleGlitch()
+    public void ToggleGlitch(bool value)
     {
-        is_glitching = !is_glitching;
+        is_glitching = value;
 
         if(is_glitching)
         {
@@ -45,7 +43,6 @@ public class Pushable : MonoBehaviour, IGlitchable
             if (collision.gameObject.CompareTag("Player"))
             {
                 Rigidbody2D player_rigid_body = collision.gameObject.GetComponent<Rigidbody2D>();
-
                 float x_speed = player_rigid_body.velocity.x;
                 float y_speed = collision.relativeVelocity.y * bounce_force * -1;
                 Vector2 bounce_speed = new Vector2(x_speed, y_speed);

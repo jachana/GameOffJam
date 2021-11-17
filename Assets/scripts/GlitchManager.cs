@@ -35,7 +35,7 @@ public class GlitchManager : MonoBehaviour
         {
             foreach (IGlitchable glitch in glitch_list)
             {
-                glitch.ToggleGlitch();
+                glitch.ToggleGlitch(is_glitching);
             }
             if (is_glitching)
             {

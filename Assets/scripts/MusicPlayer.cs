@@ -19,9 +19,9 @@ public class MusicPlayer : MonoBehaviour, IGlitchable
         glitchy_music.volume = 0;
     }
 
-    public void ToggleGlitch()
+    public void ToggleGlitch(bool value)
     {
-        is_glitching = !is_glitching;
+        is_glitching = value;
         StartCoroutine(FadeBetweenTracks());
     }
 
