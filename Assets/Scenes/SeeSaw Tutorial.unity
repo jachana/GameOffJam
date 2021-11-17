@@ -2543,10 +2543,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 11.67
       objectReference: {fileID: 0}
-    - target: {fileID: 7937404854688126235, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
-      propertyPath: offset.z
-      value: -20
-      objectReference: {fileID: 0}
     - target: {fileID: 8917557386447207775, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_Name
       value: Basic Level Starter Pack
