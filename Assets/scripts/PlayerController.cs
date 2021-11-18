@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         if (otherCollider.gameObject.GetComponent<Platform>())
         {
             _is_grounded = true;
-            _sprite_renderer.color = Color.green;
+            //_sprite_renderer.color = Color.green;
         }
     }
     void OnTriggerExit2D(Collider2D otherCollider)
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         if (otherCollider.gameObject.GetComponent<Platform>())
         {
             _is_grounded = false;
-            _sprite_renderer.color = Color.white;
+           // _sprite_renderer.color = Color.white;
         }
     }
 }

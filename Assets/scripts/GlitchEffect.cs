@@ -36,7 +36,7 @@ public class GlitchEffect : MonoBehaviour, IGlitchable
 	private float _glitchdownTime = 0.05f;
 	private float _flickerTime = 0.5f;
 	private Material _material;
-	private bool _is_glitching = true;
+	private bool _is_glitching = false;
 
 	void Start()
 	{
@@ -52,7 +52,7 @@ public class GlitchEffect : MonoBehaviour, IGlitchable
 		float used_color_intensity;
 		float used_intensity;
 
-		if (!_is_glitching)
+		if (_is_glitching)
 		{ 
 			 used_flip_intensity = flipIntensity;
 			 used_color_intensity = colorIntensity;

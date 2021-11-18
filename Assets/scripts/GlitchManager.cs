@@ -33,7 +33,6 @@ public class GlitchManager : MonoBehaviour
         glitch_list.Remove(glitchable);
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;
@@ -43,16 +42,17 @@ public class GlitchManager : MonoBehaviour
             {
                 glitch.ToggleGlitch(is_glitching);
             }
+            is_glitching = !is_glitching;
+
             if (is_glitching)
             {
-                timer = normal_time;
+                timer = glitch_time;
             }
             else
             {
-                timer = glitch_time;
+                timer =normal_time ;
 
             }
-            is_glitching = !is_glitching;
         }
     }
 }
