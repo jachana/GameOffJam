@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScenePersist : MonoBehaviour
 {
-    private int lastActiveScene = -1;
+    private static int lastActiveScene = -1;
 
     private void Awake()
     {
@@ -28,8 +28,9 @@ public class ScenePersist : MonoBehaviour
                 scenePersistsList.Remove(this);
                 foreach (ScenePersist scenePersist in scenePersistsList)
                 {
-                    Destroy(scenePersist);
+                    Destroy(scenePersist.gameObject);
                 }
+                DontDestroyOnLoad(this);
             }
         }
         else
