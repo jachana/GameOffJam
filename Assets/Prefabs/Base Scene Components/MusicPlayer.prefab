@@ -45,7 +45,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -137,6 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 524294557998301283}
   - component: {fileID: 524294557998301282}
+  - component: {fileID: 289711899754393920}
   m_Layer: 0
   m_Name: MusicPlayer
   m_TagString: Untagged
@@ -176,6 +177,18 @@ MonoBehaviour:
   normal_music: {fileID: 1091801817465246356}
   glitchy_music: {fileID: 2626567634918446649}
   time_to_fade: 0.25
+--- !u!114 &289711899754393920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524294557998301281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f354b7ff56d2f42abc35f403c763b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1751333592787863480
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +234,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -348,7 +361,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

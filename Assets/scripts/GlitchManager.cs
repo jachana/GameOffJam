@@ -27,6 +27,12 @@ public class GlitchManager : MonoBehaviour
     {
         glitch_list.Add(glitchable);
     }
+
+    public void RemoveGlitchableOfList(IGlitchable glitchable)
+    {
+        glitch_list.Remove(glitchable);
+    }
+
     // Update is called once per frame
     void Update()
     {
