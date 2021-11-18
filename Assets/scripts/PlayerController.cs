@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     // Animation keys
     string is_running_key = "is_running";
+    string is_grounded_key = "is_grounded";
+    string y_velocity_key = "y_velocity";
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         CheckPlayerInput();
+        UpdateAnimatorKeys();
         FlipCharacter();
     }
 
@@ -38,13 +41,19 @@ public class PlayerController : MonoBehaviour
     {
         horizontal_direction = Input.GetAxisRaw("Horizontal");
 
-        bool is_running = horizontal_direction != 0;
-        _animator.SetBool(is_running_key, is_running);
-
         if (Input.GetButtonDown("Jump") && _is_grounded)
         {
             _rigidbody.AddForce(new Vector2(0, _jump_force), ForceMode2D.Impulse);
         }
+    }
+
+    void UpdateAnimatorKeys()
+    {
+        bool is_running = horizontal_direction != 0;
+        _animator.SetBool(is_running_key, is_running);
+
+        _animator.SetBool(is_grounded_key, _is_grounded);
+        _animator.SetFloat(y_velocity_key, _rigidbody.velocity.y);
     }
 
     void FlipCharacter()
