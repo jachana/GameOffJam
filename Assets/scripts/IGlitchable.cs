@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IGlitchable
 {
-    void ToggleGlitch();
+   // void ToggleGlitch();
+    void ToggleGlitch(bool value);
 }

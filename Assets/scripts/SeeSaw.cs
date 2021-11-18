@@ -21,9 +21,9 @@ public abstract class SeeSaw : MonoBehaviour, IGlitchable
     protected abstract void StartGlitch();
     protected abstract void EndGlitch();
 
-    public void ToggleGlitch()
+    public void ToggleGlitch(bool value)
     {
-        _is_glitching = !_is_glitching;
+        _is_glitching = value;
         if (_is_glitching)
         {
             StartGlitch();

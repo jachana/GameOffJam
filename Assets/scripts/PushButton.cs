@@ -5,7 +5,8 @@ using UnityEngine.Events;
 public class PushButton : MonoBehaviour, IInteractable
 {
     [SerializeField] public UnityEvent CallOnInteract;
-
+    [SerializeField]
+    public IActivate activatable;
     private IEnumerator ChangeVisualAspect()
     {
         GetComponent<SpriteRenderer>().color = Color.green;

@@ -7,6 +7,7 @@ public class MusicPlayer : MonoBehaviour, IGlitchable
     [SerializeField] AudioSource normal_music;
     [SerializeField] AudioSource glitchy_music;
     [SerializeField] float time_to_fade = 0.25f;
+    [SerializeField] float max_volume = 0.25f;
 
     bool is_glitching = false;
 
@@ -14,13 +15,13 @@ public class MusicPlayer : MonoBehaviour, IGlitchable
     void Start()
     {
         GlitchManager.Instance.AddGlitchableToList(this);
-        normal_music.volume = 1;
+        normal_music.volume = max_volume;
         glitchy_music.volume = 0;
     }
 
-    public void ToggleGlitch()
+    public void ToggleGlitch(bool value)
     {
-        is_glitching = !is_glitching;
+        is_glitching = value;
         StartCoroutine(FadeBetweenTracks());
     }
 
@@ -44,9 +45,9 @@ public class MusicPlayer : MonoBehaviour, IGlitchable
 
         while (time_elapsed <= time_to_fade)
         {
-            float volume_fade_in = Mathf.Lerp(0, 1, time_elapsed / time_to_fade);
+            float volume_fade_in = Mathf.Lerp(0, max_volume, time_elapsed / time_to_fade);
             track_fade_in.volume = volume_fade_in;
-            track_fade_out.volume = 1 - volume_fade_in;
+            track_fade_out.volume = max_volume - volume_fade_in;
             time_elapsed += Time.deltaTime;
 
             yield return null;

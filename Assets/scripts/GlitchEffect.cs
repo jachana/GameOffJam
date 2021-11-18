@@ -124,9 +124,9 @@ public class GlitchEffect : MonoBehaviour, IGlitchable
 
 	}
 
-    public void ToggleGlitch()
+    public void ToggleGlitch(bool value)
     {
-		_is_glitching = !_is_glitching;
+		_is_glitching = value;
 
 	}
 }
