@@ -10,6 +10,7 @@ public class Pushable : MonoBehaviour, IGlitchable
     private Rigidbody2D rigid_body;
     private SpriteRenderer sprite_renderer;
     private Vector2 initial_position;
+    [SerializeField] private Sprite normal_sprint,glitchy_sprite;
 
     // Start is called before the first frame update
     void Start()
@@ -27,12 +28,12 @@ public class Pushable : MonoBehaviour, IGlitchable
         if(is_glitching)
         {
             rigid_body.bodyType = RigidbodyType2D.Static;
-            sprite_renderer.color = Color.red;
+            sprite_renderer.sprite = glitchy_sprite;
         }
         else
         {
             rigid_body.bodyType = RigidbodyType2D.Dynamic;
-            sprite_renderer.color = Color.green;
+            sprite_renderer.sprite = normal_sprint;
         }
     }
 
