@@ -24,18 +24,12 @@ public class Pushable : Spawnable, IGlitchable
     public void ToggleGlitch(bool value)
     {
         is_glitching = value;
-
-        if(is_glitching)
+        if (is_glitching)
         {
-            rigid_body.constraints = RigidbodyConstraints2D.FreezePosition;
-            
-            //rigid_body.bodyType = RigidbodyType2D.Static;
             sprite_renderer.sprite = glitchy_sprite;
         }
         else
         {
-            //rigid_body.bodyType = RigidbodyType2D.Dynamic;
-            rigid_body.constraints = RigidbodyConstraints2D.None;
             sprite_renderer.sprite = normal_sprint;
         }
     }
@@ -60,7 +54,7 @@ public class Pushable : Spawnable, IGlitchable
         if(collision.CompareTag("Deadly"))
         {
             if (is_spawned)
-                Destroy(this);
+                ResetSpawnable();
             else
                 ResetPosition();
         }

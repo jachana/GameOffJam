@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     Spawnable spawnable_prefab;
     [SerializeField]
     bool limited;
-    bool has_spawned = false;
+    public bool has_spawned = false;
     [SerializeField]
     float scale =1;
     // Start is called before the first frame update
@@ -29,8 +29,8 @@ public class Spawner : MonoBehaviour
             Spawnable go =Instantiate(spawnable_prefab, transform.position, Quaternion.identity);
             go.transform.localScale = Vector3.one * scale;
             go.setSpawnState(true);
+            go.spawner = this;
         }
         has_spawned = true;
-
     }
 }

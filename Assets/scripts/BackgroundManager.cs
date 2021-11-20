@@ -25,6 +25,7 @@ public class BackgroundManager : MonoBehaviour
 
                 Vector3 offset= new Vector3(x_offset* texture_size_x, y_offset* texture_size_y, 50);
                 go.transform.position += offset;
+                go.transform.parent = transform;
             }
         }
         
