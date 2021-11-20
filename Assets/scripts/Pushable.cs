@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pushable : MonoBehaviour, IGlitchable
+public class Pushable : Spawnable, IGlitchable
 {
     [SerializeField] private float bounce_force = 1.3f;
 
@@ -27,12 +27,15 @@ public class Pushable : MonoBehaviour, IGlitchable
 
         if(is_glitching)
         {
-            rigid_body.bodyType = RigidbodyType2D.Static;
+            rigid_body.constraints = RigidbodyConstraints2D.FreezePosition;
+            
+            //rigid_body.bodyType = RigidbodyType2D.Static;
             sprite_renderer.sprite = glitchy_sprite;
         }
         else
         {
-            rigid_body.bodyType = RigidbodyType2D.Dynamic;
+            //rigid_body.bodyType = RigidbodyType2D.Dynamic;
+            rigid_body.constraints = RigidbodyConstraints2D.None;
             sprite_renderer.sprite = normal_sprint;
         }
     }
@@ -56,12 +59,16 @@ public class Pushable : MonoBehaviour, IGlitchable
     {
         if(collision.CompareTag("Deadly"))
         {
-            ResetPosition();
+            if (is_spawned)
+                Destroy(this);
+            else
+                ResetPosition();
         }
     }
 
     private void ResetPosition()
     {
         transform.position = initial_position;
+        rigid_body.velocity = Vector3.zero;
     }
 }

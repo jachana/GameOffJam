@@ -20,9 +20,12 @@ public class Platform : PlatformBase
     {
         if (!col.gameObject.GetComponent<Platform>())
         {
-            col.transform.parent = transform;
+            if (col.gameObject.tag == "Player")
+                col.transform.parent = transform;
             if (col.gameObject.tag == "Pushable")
             {
+                col.transform.parent = transform;
+
                 col.gameObject.AddComponent<Platform>();
             }
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField]
-    Transform spawnable_prefab;
+    Spawnable spawnable_prefab;
     [SerializeField]
     bool limited;
     bool has_spawned = false;
@@ -26,8 +26,9 @@ public class Spawner : MonoBehaviour
     {
         if (!limited ||!has_spawned)
         {
-            Transform go =Instantiate(spawnable_prefab, transform.position, Quaternion.identity);
-            go.localScale = Vector3.one * scale;
+            Spawnable go =Instantiate(spawnable_prefab, transform.position, Quaternion.identity);
+            go.transform.localScale = Vector3.one * scale;
+            go.setSpawnState(true);
         }
         has_spawned = true;
 

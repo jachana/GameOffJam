@@ -108,6 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bda33a1f2569c744a3c86c54c6f6e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnable_prefab: {fileID: 2929996705077630973, guid: f9eba7ae061d02a47b144edc0e1b6f27, type: 3}
+  spawnable_prefab: {fileID: 2078282285800891249, guid: f9eba7ae061d02a47b144edc0e1b6f27, type: 3}
   limited: 0
   scale: 1

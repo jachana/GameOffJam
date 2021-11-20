@@ -6,6 +6,7 @@ public enum ButtonType
 {
     TOGGLE,
     PULSE,
+    SINGLE_PULSE,
     PERMANENT
 }
 [RequireComponent(typeof(SpriteRenderer))]
@@ -16,12 +17,33 @@ public class Button : MonoBehaviour, IInteractable
     SpriteRenderer sprite_renderer;
     [SerializeField]
     ButtonType button_type;
-    bool has_been_activated=false, is_activated = false;
+    bool has_been_activated=false, is_activated = false, is_pulsing;
+
     private IEnumerator PulseInteraction()
     {
-        TurnOn();
-        yield return new WaitForSeconds(1);
-        TurnOff();
+        if (!is_pulsing)
+        {
+            is_pulsing = true;
+            TurnOn();
+            yield return new WaitForSeconds(1);
+            TurnOff(true);
+            is_pulsing = false;
+
+        }
+
+    }
+
+    private IEnumerator SinglePulseInteraction()
+    {
+        if (!is_pulsing)
+        {
+            is_pulsing = true;
+            TurnOn();
+            yield return new WaitForSeconds(1);
+            TurnOff(false);
+            is_pulsing = false;
+
+        }
     }
 
     public void ManualInteract(PlayerInteractions interactor)
@@ -36,6 +58,9 @@ public class Button : MonoBehaviour, IInteractable
                 break;
             case ButtonType.PERMANENT:
                 Permanent();
+                break;
+            case ButtonType.SINGLE_PULSE:
+                SinglePulse();
                 break;
             default:
                 break;
@@ -52,22 +77,27 @@ public class Button : MonoBehaviour, IInteractable
         CallOnInteract.Invoke();
     }
 
-    private void TurnOff()
+    private void TurnOff(bool deactivate)
     {
         sprite_renderer.sprite = off_sprite;
-        CallOnInteract.Invoke();
+        if(deactivate)
+            CallOnInteract.Invoke();
     }
 
     public void Pulse()
     {
         StartCoroutine(PulseInteraction());
     }
+    public void SinglePulse()
+    {
+        StartCoroutine(SinglePulseInteraction());
+    }
 
     public void Toggle()
     {
         if (is_activated)
         {
-            TurnOff();
+            TurnOff(true);
         }
         else
         {
