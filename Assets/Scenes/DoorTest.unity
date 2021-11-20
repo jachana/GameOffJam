@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 351124454650800996, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 509936832}
+    - target: {fileID: 351124454650800996, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Reset
+      objectReference: {fileID: 0}
+    - target: {fileID: 351124454650800996, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResetLevel, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.16
@@ -204,6 +216,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
+--- !u!1 &509936831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 351124454650800994, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
+  m_PrefabInstance: {fileID: 509936830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &509936832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509936831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddba6680e56e1674ca8d1e09d97ec2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &663959560
 PrefabInstance:
   m_ObjectHideFlags: 0

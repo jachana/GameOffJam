@@ -7,8 +7,7 @@ public class Door : MonoBehaviour, IActivate
     [SerializeField]
     private SpriteRenderer lower_door, top_door;
     [SerializeField]
-    private Transform lower_door_pos, top_door_pos;
-
+    private Collider2D collider;
     private bool is_active;
     void Start()
     {
@@ -43,7 +42,7 @@ public class Door : MonoBehaviour, IActivate
             top_door.transform.position += Vector3.left* movement_requiered / steps;
             yield return new WaitForSeconds(legth_in_seconds / steps);
         }
-
+        collider.enabled = false;
 
     }
 
@@ -56,6 +55,7 @@ public class Door : MonoBehaviour, IActivate
             yield return new WaitForSeconds(legth_in_seconds / steps);
         }
 
+        collider.enabled = true;
 
     }
 
