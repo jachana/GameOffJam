@@ -2,19 +2,16 @@ using System.Collections;
 using UnityEngine;
 
 // I will not add requiere for SpriteRenderer because we may not use it later
-[RequireComponent(typeof(Rigidbody2D))]
 public class Door : MonoBehaviour, IActivate
 {
-    private Rigidbody2D _rigid_body;
-    private SpriteRenderer _sprite;
+    [SerializeField]
+    private SpriteRenderer lower_door, top_door;
+    [SerializeField]
+    private Transform lower_door_pos, top_door_pos;
 
     private bool is_active;
-    [SerializeField] float active_time = 0f;
-
     void Start()
     {
-        _rigid_body = GetComponent<Rigidbody2D>();
-        _sprite = GetComponent<SpriteRenderer>();
 
         is_active = false;
     }
@@ -26,16 +23,40 @@ public class Door : MonoBehaviour, IActivate
 
     public void Activate()
     {
-        _rigid_body.simulated = false;
-        _sprite.color = Color.cyan;
+        StartCoroutine(OpenDoor());
         is_active = true;
     }
 
     public void Deactivate()
     {
-        _rigid_body.simulated = true;
-        _sprite.color = Color.yellow;
+        StartCoroutine(CloseDoor());
         is_active = false;
+    }
+    float steps = 30f;
+    float legth_in_seconds = .3f;
+    float movement_requiered = 2.5f;
+    IEnumerator OpenDoor()
+    {
+        for (int i = 0; i < steps; i++)
+        {
+            lower_door.transform.position += Vector3.right* movement_requiered / steps;
+            top_door.transform.position += Vector3.left* movement_requiered / steps;
+            yield return new WaitForSeconds(legth_in_seconds / steps);
+        }
+
+
+    }
+
+    IEnumerator CloseDoor()
+    {
+        for (int i = 0; i < steps; i++)
+        {
+            lower_door.transform.position += Vector3.left* movement_requiered / steps;
+            top_door.transform.position += Vector3.right* movement_requiered / steps;
+            yield return new WaitForSeconds(legth_in_seconds / steps);
+        }
+
+
     }
 
     public void Enhance()
