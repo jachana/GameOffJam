@@ -7,11 +7,14 @@ public class Door : MonoBehaviour, IActivate
     [SerializeField]
     private SpriteRenderer lower_door, top_door;
     [SerializeField]
+    private AudioClip open_door_clip, close_door_clip;
+    private AudioSource audio_source;
+    [SerializeField]
     private Collider2D collider;
     private bool is_active;
     void Start()
     {
-
+        audio_source = GetComponent<AudioSource>();
         is_active = false;
     }
 
@@ -36,6 +39,8 @@ public class Door : MonoBehaviour, IActivate
     float movement_requiered = 2.5f;
     IEnumerator OpenDoor()
     {
+        audio_source.clip = open_door_clip;
+        audio_source.Play();
         for (int i = 0; i < steps; i++)
         {
             lower_door.transform.position += Vector3.right* movement_requiered / steps;
@@ -48,6 +53,8 @@ public class Door : MonoBehaviour, IActivate
 
     IEnumerator CloseDoor()
     {
+        audio_source.clip = close_door_clip;
+        audio_source.Play();
         for (int i = 0; i < steps; i++)
         {
             lower_door.transform.position += Vector3.left* movement_requiered / steps;
