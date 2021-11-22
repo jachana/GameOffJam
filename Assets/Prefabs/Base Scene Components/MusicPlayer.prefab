@@ -177,6 +177,7 @@ MonoBehaviour:
   normal_music: {fileID: 1091801817465246356}
   glitchy_music: {fileID: 2626567634918446649}
   time_to_fade: 0.25
+  max_volume: 0.25
 --- !u!114 &289711899754393920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +360,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3d58472c8d8b15b44b270b02d4dd21f5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0

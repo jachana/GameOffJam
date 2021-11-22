@@ -10,11 +10,24 @@ public class MusicPlayer : MonoBehaviour, IGlitchable
     [SerializeField] float max_volume = 0.25f;
 
     bool is_glitching = false;
+    private static MusicPlayer Instance;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        GlitchManager.Instance.AddGlitchableToList(this);
         normal_music.volume = max_volume;
         glitchy_music.volume = 0;
     }

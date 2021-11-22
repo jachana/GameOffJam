@@ -16,7 +16,7 @@ public class GlitchablePersistent : MonoBehaviour
 
     void AddThisToGlitchList(Scene scene, LoadSceneMode mode)
     {
-        GlitchManager.Instance.AddGlitchableToList(_glitchable_component);
+        GlitchManager.Instance?.AddGlitchableToList(_glitchable_component);
     }
 
     private void OnDisable()
