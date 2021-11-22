@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour, IGlitchable
 {
+    [SerializeField] AudioSource base_music;
+    [SerializeField] float base_music_restart_time = 20f;
     [SerializeField] AudioSource normal_music;
     [SerializeField] AudioSource glitchy_music;
     [SerializeField] float time_to_fade = 0.25f;
@@ -30,6 +32,7 @@ public class MusicPlayer : MonoBehaviour, IGlitchable
     {
         normal_music.volume = max_volume;
         glitchy_music.volume = 0;
+        StartCoroutine(RestartBaseMusic());
     }
 
     public void ToggleGlitch(bool value)
@@ -67,4 +70,18 @@ public class MusicPlayer : MonoBehaviour, IGlitchable
         }
     }
 
+    private IEnumerator RestartBaseMusic()
+    {
+        float currentTime = base_music.time;
+
+        yield return new WaitForSeconds(base_music.clip.length - currentTime);
+
+        base_music.time = base_music_restart_time;
+        base_music.Play();
+
+        normal_music.time = base_music.time;
+        glitchy_music.time = base_music.time;
+
+        StartCoroutine(RestartBaseMusic());
+    }
 }

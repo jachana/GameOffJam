@@ -22,6 +22,6 @@ public class GlitchablePersistent : MonoBehaviour
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= AddThisToGlitchList;
-        GlitchManager.Instance.RemoveGlitchableOfList(_glitchable_component);
+        GlitchManager.Instance?.RemoveGlitchableOfList(_glitchable_component);
     }
 }
