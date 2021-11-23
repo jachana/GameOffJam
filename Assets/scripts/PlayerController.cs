@@ -34,11 +34,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_is_grounded)
-            _rigidbody.velocity = new Vector2(horizontal_direction * _player_speed, _rigidbody.velocity.y);
-        else
-            _rigidbody.velocity = new Vector2(horizontal_direction * _player_speed/2, _rigidbody.velocity.y);
-
+        _rigidbody.velocity = new Vector2(horizontal_direction * _player_speed, _rigidbody.velocity.y);
     }
 
     void CheckPlayerInput()

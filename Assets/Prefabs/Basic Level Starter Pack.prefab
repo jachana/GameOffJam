@@ -184,34 +184,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6183750818531750170}
     m_Modifications:
-    - target: {fileID: -8075134714373875047, guid: c4ae0a0e6c08b4846a5d48754cac028d, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8075134714373875047, guid: c4ae0a0e6c08b4846a5d48754cac028d, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8075134714373875047, guid: c4ae0a0e6c08b4846a5d48754cac028d, type: 3}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8075134714373875047, guid: c4ae0a0e6c08b4846a5d48754cac028d, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8075134714373875047, guid: c4ae0a0e6c08b4846a5d48754cac028d, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8075134714373875047, guid: c4ae0a0e6c08b4846a5d48754cac028d, type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8075134714373875047, guid: c4ae0a0e6c08b4846a5d48754cac028d, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1599973124272104389, guid: c4ae0a0e6c08b4846a5d48754cac028d, type: 3}
       propertyPath: m_Size.x
       value: 0.16
