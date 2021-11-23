@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3174258972125994278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733972507299306656}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &733972507299306656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3174258972125994278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2901696868719736001}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7763843381288271328
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4619265728618958240}
+  - {fileID: 733972507299306656}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -244,7 +275,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8086472143281966872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 52094b5647e064c478009e59b8dd83e6, type: 2}
   m_IsTrigger: 0
@@ -261,7 +292,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 1.55}
+  m_Size: {x: 0.4, y: 1.5}
   m_EdgeRadius: 0
 --- !u!50 &-8075134714373875047
 Rigidbody2D:
@@ -294,12 +325,12 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.8}
-  m_Size: {x: 0.45, y: 0.2}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1.6}
+  m_Direction: 0
 --- !u!114 &3608703699429112994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,8 +356,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f388c7b1342b613459fd6631fe83a383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player_speed: 8
-  _jump_force: 6
+  movementSpeed: 6
+  groundCheckRadius: 0.16
+  jumpForce: 8
+  slopeCheckDistance: 0.7
+  maxSlopeAngle: 50
+  groundCheck: {fileID: 733972507299306656}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  noFriction: {fileID: 6200000, guid: 52094b5647e064c478009e59b8dd83e6, type: 2}
+  fullFriction: {fileID: 6200000, guid: 79d210a27100d4945aa012beb766dbdf, type: 2}
+  slopeDownAngle: 0
+  lastSlopeAngle: 0
+  isGrounded: 0
+  isOnSlope: 0
+  canWalkOnSlope: 0
 --- !u!114 &1096762876235000244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,4 +396,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600a6c6a727176a4988115ca233b0c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level_manager: {fileID: 0}
