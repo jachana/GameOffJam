@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: ff280e26148744941ab772d97079ad00
+  - enabled: 1
     path: Assets/Scenes/Levels/Complete movement tutorial.unity
     guid: d6d71b00054d66f409a39ec269138560
   - enabled: 1
