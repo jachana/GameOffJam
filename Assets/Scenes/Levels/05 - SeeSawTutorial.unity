@@ -2462,6 +2462,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -6.08
       objectReference: {fileID: 0}
+    - target: {fileID: 3913503156342851060, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 127.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3913503156342851060, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.92
+      objectReference: {fileID: 0}
     - target: {fileID: 5200614157577591989, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -2536,11 +2544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520881814559376344, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 129.31
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 7520881814559376344, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.67
+      value: -0.49
       objectReference: {fileID: 0}
     - target: {fileID: 8917557386447207775, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_Name
