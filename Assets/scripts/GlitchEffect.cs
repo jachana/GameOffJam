@@ -10,6 +10,7 @@ to make commercial use of the work
 */
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [ExecuteInEditMode]
 [AddComponentMenu("Image Effects/GlitchEffect")]
@@ -37,11 +38,24 @@ public class GlitchEffect : MonoBehaviour, IGlitchable
 	private float _flickerTime = 0.5f;
 	private Material _material;
 	private bool _is_glitching = false;
+	[SerializeField]
+	bool _start_active = false;
 
 	void Start()
 	{
+		if (_start_active)
+			_is_glitching = true;
 		_material = new Material(Shader);
-		GlitchManager.Instance.AddGlitchableToList(this);
+        try
+        {
+			GlitchManager.Instance.AddGlitchableToList(this);
+
+		}
+		catch (System.Exception)
+        {
+			Debug.LogError("There is no glitch manager instantiated in scene " + SceneManager.GetActiveScene().name);
+        }
+		
 
 	}
 
@@ -65,7 +79,7 @@ public class GlitchEffect : MonoBehaviour, IGlitchable
 			 used_intensity = 0;
 
 		}
-
+		Debug.Log(used_intensity);
 		_material.SetFloat("_Intensity", used_intensity);
 		_material.SetFloat("_ColorIntensity", colorIntensity);
 		_material.SetTexture("_DispTex", displacementMap);
