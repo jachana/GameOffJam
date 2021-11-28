@@ -9,7 +9,7 @@ public class FollowTarget : MonoBehaviour
     [SerializeField]
     private Vector3 velocity = Vector3.zero;
     [SerializeField]
-    private Vector3 offset = Vector3.zero;
+    private Vector3 offset;
 
     void Update()
     {

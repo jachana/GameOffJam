@@ -100,7 +100,7 @@ MonoBehaviour:
   target: {fileID: 0}
   smooth_time: 0.3
   velocity: {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: 5, z: -30}
+  offset: {x: 0, y: 3, z: -30}
 --- !u!114 &8865019132053040527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,3 +118,4 @@ MonoBehaviour:
   intensity: 0.286
   flipIntensity: 0.33
   colorIntensity: 0.297
+  _start_active: 0
