@@ -18,6 +18,8 @@ public class Platform : PlatformBase
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log("touched "+ col.gameObject.name);
+
         if (!col.gameObject.GetComponent<Platform>())
         {
             if (col.gameObject.tag == "Player")
@@ -25,7 +27,7 @@ public class Platform : PlatformBase
             if (col.gameObject.tag == "Pushable")
             {
                 col.transform.parent = transform;
-
+                Debug.Log("touched a pushable");
                 col.gameObject.AddComponent<Platform>();
             }
         }
@@ -33,6 +35,17 @@ public class Platform : PlatformBase
 
     void OnCollisionExit2D(Collision2D col)
     {
-        col.transform.parent = null;
+        if (col.gameObject.GetComponent<Platform>())
+        {
+           
+            if (col.gameObject.tag == "Pushable")
+            {
+                col.transform.parent = null;
+                Debug.Log("touched a pushable");
+                Destroy(col.gameObject.GetComponent<Platform>());
+            }
+        }
+        else if (col.gameObject.tag == "Player")
+            col.transform.parent = null;
     }
 }

@@ -26,7 +26,8 @@ public class Spawnable : MonoBehaviour
     public void ResetSpawnable()
     {
         spawner.has_spawned = false;
-        Destroy(this);
+        Debug.Log("spawnable destroyed:  " + name);
+        Destroy(gameObject);
     }
 
 }

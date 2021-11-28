@@ -65,4 +65,8 @@ public class Pushable : Spawnable, IGlitchable
         transform.position = initial_position;
         rigid_body.velocity = Vector3.zero;
     }
+    private void OnDestroy()
+    {
+        GlitchManager.Instance.RemoveGlitchableOfList(this);
+    }
 }
