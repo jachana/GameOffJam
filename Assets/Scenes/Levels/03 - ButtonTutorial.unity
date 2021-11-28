@@ -2040,7 +2040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929996705077630973, guid: f9eba7ae061d02a47b144edc0e1b6f27, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.119999
+      value: -3.19
       objectReference: {fileID: 0}
     - target: {fileID: 2929996705077630973, guid: f9eba7ae061d02a47b144edc0e1b6f27, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2916,7 +2916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.32
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3252,11 +3252,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -85.04
+      value: -84.92
       objectReference: {fileID: 0}
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.99
+      value: -19.5
       objectReference: {fileID: 0}
     - target: {fileID: 4037334515179168776, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: size
@@ -4014,7 +4014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79
+      value: 12.72
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4215,8 +4215,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _is_active: 1
   _speed: 1
-  _offset: 0
-  _movement_vector: {x: 0, y: 11.5, z: 0}
+  _offset: 1
+  _movement_vector: {x: 0, y: -12, z: 0}
 --- !u!1001 &1386808920
 PrefabInstance:
   m_ObjectHideFlags: 0
