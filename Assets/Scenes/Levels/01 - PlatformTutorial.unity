@@ -491,7 +491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2486683691483375294, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.7
+      value: -31.56
       objectReference: {fileID: 0}
     - target: {fileID: 2486683691483375294, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1467,6 +1467,7 @@ MonoBehaviour:
   _speed: 1
   _offset: 1
   _movement_vector: {x: 6, y: 0, z: 0}
+  wait_time: 0
 --- !u!4 &658665072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
@@ -1493,6 +1494,7 @@ MonoBehaviour:
   _speed: 1
   _offset: 0
   _movement_vector: {x: 0, y: 6, z: 0}
+  wait_time: 0
 --- !u!4 &718092330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
@@ -2553,6 +2555,7 @@ MonoBehaviour:
   _speed: 1
   _offset: 1
   _movement_vector: {x: 4, y: 0, z: 0}
+  wait_time: 0
 --- !u!4 &1014329278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
@@ -3334,6 +3337,7 @@ MonoBehaviour:
   _speed: 1
   _offset: 1
   _movement_vector: {x: -4, y: 0, z: 0}
+  wait_time: 0
 --- !u!1001 &1284658649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5053,6 +5057,7 @@ MonoBehaviour:
   _speed: 1
   _offset: 0
   _movement_vector: {x: 0, y: 7, z: 0}
+  wait_time: 0
 --- !u!4 &2126740642 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}

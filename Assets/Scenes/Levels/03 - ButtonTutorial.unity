@@ -851,6 +851,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8263861421050266544, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
+      propertyPath: m_Size.x
+      value: 54.49445
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263861421050266544, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5347834
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263861421050266544, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
+      propertyPath: m_Offset.x
+      value: -2.835268
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263861421050266544, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.62391424
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
 --- !u!1001 &246087859
@@ -3472,6 +3488,7 @@ MonoBehaviour:
   _speed: 1
   _offset: 1
   _movement_vector: {x: 20, y: 0, z: 0}
+  wait_time: 0
 --- !u!1001 &1152089077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4229,6 +4246,7 @@ MonoBehaviour:
   _speed: 1
   _offset: 1
   _movement_vector: {x: 0, y: -12, z: 0}
+  wait_time: 0
 --- !u!1001 &1386808920
 PrefabInstance:
   m_ObjectHideFlags: 0
