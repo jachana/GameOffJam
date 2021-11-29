@@ -79,7 +79,6 @@ public class GlitchEffect : MonoBehaviour, IGlitchable
 			 used_intensity = 0;
 
 		}
-		Debug.Log(used_intensity);
 		_material.SetFloat("_Intensity", used_intensity);
 		_material.SetFloat("_ColorIntensity", colorIntensity);
 		_material.SetTexture("_DispTex", displacementMap);

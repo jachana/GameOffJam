@@ -18,7 +18,6 @@ public class Platform : PlatformBase
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("touched "+ col.gameObject.name);
 
         if (!col.gameObject.GetComponent<Platform>())
         {
