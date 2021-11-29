@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 1
+  m_Constraints: 0
 --- !u!114 &4942687056206207506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +296,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5158693630389637809}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -322,9 +322,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 5158693629757663604}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0.5}
-  m_ConnectedAnchor: {x: 0.006, y: -0.526}
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 1}
+  m_ConnectedAnchor: {x: 0, y: 0}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
