@@ -22,8 +22,7 @@ public class PlatformDistanceMove : Platform
         if (_is_active)
         {
             _clock += Time.deltaTime * _speed;
-            float current_position = Mathf.Sin(_clock + _offset * Mathf.PI);
-
+            float current_position = 1/2 + Mathf.Sin(_clock + _offset * Mathf.PI)/2;
             if (current_wait_time <= 0)
             {
                 if (current_position >= 0)
@@ -43,7 +42,7 @@ public class PlatformDistanceMove : Platform
                 if (current_wait_time <= 0)
                 {
                     is_waiting = false;
-                    _clock = 0;
+                    _clock = _offset * Mathf.PI;
                 }
             }
 
