@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] Sprite audioInactive;
     [SerializeField] Image audioMuteButtonImage;
     private AudioManager Instance;
+    private bool isMute = false;
 
     private void Awake()
     {
@@ -26,14 +27,16 @@ public class AudioManager : MonoBehaviour
 
     public void ToggleAudio()
     {
-        AudioListener.pause = !AudioListener.pause;
-        if(AudioListener.pause)
+        isMute = !isMute;
+        if(isMute)
         {
             audioMuteButtonImage.sprite = audioInactive;
+            AudioListener.volume = 0f;
         }
         else
         {
             audioMuteButtonImage.sprite = audioActive;
+            AudioListener.volume = 1f;
         }
 
     }
