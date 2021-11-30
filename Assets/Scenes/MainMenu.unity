@@ -259,8 +259,8 @@ Canvas:
   m_GameObject: {fileID: 48749716}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 762475294}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -488,9 +488,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displacementMap: {fileID: 2800000, guid: 3e4204f6851770f489eaf787ba12839b, type: 3}
   Shader: {fileID: 4800000, guid: eaef9fd0b1dea8847923bf6a3b7123ee, type: 3}
-  intensity: 0.509
-  flipIntensity: 0.463
-  colorIntensity: 0.482
+  intensity: 0.275
+  flipIntensity: 0.247
+  colorIntensity: 0.262
   _start_active: 1
 --- !u!1001 &863261721
 PrefabInstance:

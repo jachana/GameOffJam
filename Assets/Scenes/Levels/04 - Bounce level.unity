@@ -4245,7 +4245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 0.6
+  _speed: 0.5
   _offset: 0
   _movement_vector: {x: 10, y: 0, z: 0}
   wait_time: 0
