@@ -26,7 +26,6 @@ public class Platform : PlatformBase
             if (col.gameObject.tag == "Pushable")
             {
                 col.transform.parent = transform;
-                Debug.Log("touched a pushable");
                 col.gameObject.AddComponent<Platform>();
             }
         }
@@ -40,7 +39,6 @@ public class Platform : PlatformBase
             if (col.gameObject.tag == "Pushable")
             {
                 col.transform.parent = null;
-                Debug.Log("touched a pushable");
                 Destroy(col.gameObject.GetComponent<Platform>());
             }
         }

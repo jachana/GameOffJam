@@ -167,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 2590072374139270799}
     - target: {fileID: 8457210483992959670, guid: 0cfd29fec2c51814fa1953b400f4083e, type: 3}
       propertyPath: CallOnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Toggle
+      value: Activate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfd29fec2c51814fa1953b400f4083e, type: 3}

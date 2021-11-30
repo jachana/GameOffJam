@@ -31,6 +31,7 @@ public class LevelManager : MonoBehaviour
     {
         Scene current_scene = SceneManager.GetActiveScene();
         int next_scene_index = (current_scene.buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
+      
         SceneManager.LoadScene(next_scene_index);
     }
 
