@@ -2446,22 +2446,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 806190607443162541, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
-      propertyPath: m_Mass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 806190607443162541, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 806190607443162541, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1363269901164154097, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0f45598afa580034e891c541b476fb16, type: 3}
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.41
@@ -2493,14 +2477,6 @@ PrefabInstance:
     - target: {fileID: 5200614157577591989, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5859956332146362000, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
-      propertyPath: _jump_force
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5859956332146362000, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
-      propertyPath: _player_speed
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6183750818531750170, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_RootOrder
