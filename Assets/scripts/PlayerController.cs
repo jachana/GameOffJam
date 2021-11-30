@@ -86,7 +86,6 @@ public class PlayerController : MonoBehaviour
             {
                 _is_pushing = true;
             }
-
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -99,7 +98,8 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D otherCollider)
     {
-        if (otherCollider.gameObject.GetComponent<Platform>())
+        if (otherCollider.gameObject.CompareTag("Platform")  || 
+            otherCollider.gameObject.CompareTag("Pushable"))
         {
             _is_grounded = true;
         }
@@ -107,7 +107,8 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D otherCollider)
     {
-        if (otherCollider.gameObject.GetComponent<Platform>())
+        if (otherCollider.gameObject.CompareTag("Platform") ||
+            otherCollider.gameObject.CompareTag("Pushable"))
         {
             _is_grounded = false;
         }

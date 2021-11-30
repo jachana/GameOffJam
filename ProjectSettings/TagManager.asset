@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pushable
   - Deadly
+  - Platform
   layers:
   - Default
   - TransparentFX
