@@ -43,6 +43,9 @@ public class PlayerController : MonoBehaviour
 
     void CheckPlayerInput()
     {
+        if (Time.timeScale == 0)
+            return;
+
         horizontal_direction = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButtonDown("Jump") && _is_grounded)

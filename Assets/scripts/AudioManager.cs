@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] Sprite audioActive;
     [SerializeField] Sprite audioInactive;
     [SerializeField] Image audioMuteButtonImage;
-    private AudioManager Instance;
+    private static AudioManager Instance;
     private bool isMute = false;
 
     private void Awake()
@@ -16,11 +16,11 @@ public class AudioManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
