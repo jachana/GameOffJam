@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3269499214154848947}
   - component: {fileID: 3269499214154848944}
   - component: {fileID: 3269499214154848945}
+  - component: {fileID: 8626754482315963432}
   m_Layer: 0
   m_Name: NarrationTrigger
   m_TagString: Untagged
@@ -110,5 +111,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f56f81b71eaf2c64e8db25697f45cc72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &8626754482315963432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269499214154848958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5f90a96a6dfa54dbea7284f8bd603b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
