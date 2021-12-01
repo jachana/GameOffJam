@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1.0f;
+
         _rigidbody = GetComponent<Rigidbody2D>();
         _sprite_renderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
