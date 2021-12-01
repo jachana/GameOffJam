@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 0.3
+  _speed: 0.8
   _offset: 0
   _movement_vector: {x: -8, y: 0, z: 0}
   wait_time: 0.5
@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 0.3
+  _speed: 0.8
   _offset: 1
   _movement_vector: {x: -6, y: 0, z: 0}
   wait_time: 0.5
@@ -1720,7 +1720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 0.3
+  _speed: 0.8
   _offset: 0
   _movement_vector: {x: 0, y: 4, z: 0}
   wait_time: 0.5
@@ -3339,7 +3339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 0.3
+  _speed: 0.8
   _offset: 0
   _movement_vector: {x: 8, y: 0, z: 0}
   wait_time: 0.5
@@ -5091,7 +5091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 0.3
+  _speed: 0.8
   _offset: 0
   _movement_vector: {x: 0, y: -4, z: 0}
   wait_time: 0.5

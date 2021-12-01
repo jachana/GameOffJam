@@ -1286,7 +1286,7 @@ MonoBehaviour:
   _is_active: 1
   _speed: 1
   _offset: 1
-  _movement_vector: {x: 0, y: 20, z: 0}
+  _movement_vector: {x: 0, y: 1, z: 0}
   wait_time: 0
 --- !u!1001 &130290686
 PrefabInstance:
@@ -2974,9 +2974,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 1
+  _speed: 0.5
   _offset: 1
-  _movement_vector: {x: 0, y: 20, z: 0}
+  _movement_vector: {x: 0, y: 12, z: 0}
   wait_time: 0
 --- !u!1001 &328199571
 PrefabInstance:
@@ -4854,7 +4854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.7416
+      value: -16.9916
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5132,7 +5132,7 @@ MonoBehaviour:
   _is_active: 1
   _speed: 0.5
   _offset: 1
-  _movement_vector: {x: 36, y: 0, z: 0}
+  _movement_vector: {x: 15, y: 0, z: 0}
   wait_time: 0
 --- !u!4 &575738811 stripped
 Transform:
@@ -7106,9 +7106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 1
+  _speed: 0.5
   _offset: 1
-  _movement_vector: {x: 0, y: 20, z: 0}
+  _movement_vector: {x: 0, y: 12, z: 0}
   wait_time: 0
 --- !u!1001 &774545167
 PrefabInstance:
@@ -7423,9 +7423,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 0.5
+  _speed: 0.25
   _offset: 1
-  _movement_vector: {x: -37, y: 35, z: 0}
+  _movement_vector: {x: -20, y: 18, z: 0}
   wait_time: 0
 --- !u!1 &826853004 stripped
 GameObject:
@@ -7445,9 +7445,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 0.5
+  _speed: 0.25
   _offset: 1
-  _movement_vector: {x: 37, y: 35, z: 0}
+  _movement_vector: {x: 20, y: 18, z: 0}
   wait_time: 0
 --- !u!1001 &836735526
 PrefabInstance:
@@ -9089,11 +9089,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -249.29999
+      value: -271.3
       objectReference: {fileID: 0}
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -48.65
+      value: -7.1500015
       objectReference: {fileID: 0}
     - target: {fileID: 3913503156342851060, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11483,7 +11483,7 @@ MonoBehaviour:
   _is_active: 1
   _speed: 0.5
   _offset: 1
-  _movement_vector: {x: -36, y: 0, z: 0}
+  _movement_vector: {x: -15, y: 0, z: 0}
   wait_time: 0
 --- !u!1001 &1364905516
 PrefabInstance:
@@ -15759,7 +15759,7 @@ MonoBehaviour:
   _is_active: 1
   _speed: 1
   _offset: 1
-  _movement_vector: {x: 0, y: 20, z: 0}
+  _movement_vector: {x: 0, y: 1, z: 0}
   wait_time: 0
 --- !u!1001 &1710936706
 PrefabInstance:
@@ -16477,7 +16477,7 @@ MonoBehaviour:
   _is_active: 1
   _speed: 1
   _offset: 1
-  _movement_vector: {x: 0, y: -15, z: 0}
+  _movement_vector: {x: 0, y: -14, z: 0}
   wait_time: 0
 --- !u!1001 &1820443424
 PrefabInstance:
@@ -17814,9 +17814,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 1
+  _speed: 0.5
   _offset: 0
-  _movement_vector: {x: 0, y: -25, z: 0}
+  _movement_vector: {x: 0, y: -10, z: 0}
   wait_time: 0
 --- !u!1001 &1969236206
 PrefabInstance:
