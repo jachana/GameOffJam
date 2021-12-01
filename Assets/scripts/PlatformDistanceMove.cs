@@ -101,7 +101,8 @@ public class PlatformDistanceMove : Platform
 
     private void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, temp_target_position, max_movement);
+        if(_is_active && !is_waiting)
+            transform.position = Vector3.MoveTowards(transform.position, temp_target_position, max_movement);
     }
 
     public override void Diminish()
