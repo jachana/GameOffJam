@@ -6,17 +6,18 @@ public class NarrationTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    NarrationClip clip;
+    List<string> dialogues = new List<string>();
 
     SpriteRenderer _sprite_renderer;
     Collider2D _collider;
+
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
         if (otherCollider.gameObject.GetComponent<PlayerController>())
         {
             _collider.enabled = false;
             _sprite_renderer.enabled=false;
-            Narrator.Instance.NarrateClip(clip);
+            DialogueBox.Instance.ShowText(dialogues);
         }
     }
     private void Start()
