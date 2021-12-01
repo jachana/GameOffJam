@@ -30,7 +30,7 @@ public class Pickable : MonoBehaviour, IInteractable
             PlayerInventory.Instance.FoundItem(_item_id);
             _has_been_picked = true;
             _sprite_renderer.color = new Color(0, 0, 0, .3f);
-            _collider.enabled = false;
+            //_collider.enabled = false;
         }
     }
 

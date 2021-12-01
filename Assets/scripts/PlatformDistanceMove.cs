@@ -51,7 +51,6 @@ public class PlatformDistanceMove : Platform
                 float distance = (transform.position - temp_target_position).magnitude;
                 if (distance <= 0.1f)
                 {
-                    Debug.Log("ENTREEEEEEEE : " + distance);
                     if (wait_time > 0)
                     {
                         current_wait_time = wait_time;
