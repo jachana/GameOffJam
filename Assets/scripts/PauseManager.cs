@@ -22,7 +22,11 @@ public class PauseManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(SceneManager.GetActiveScene().buildIndex == 0)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(gameObject);
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 7)
         {
             Destroy(gameObject);
         }
