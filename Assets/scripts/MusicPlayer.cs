@@ -37,6 +37,9 @@ public class MusicPlayer : MonoBehaviour, IGlitchable
 
     public void ToggleGlitch(bool value)
     {
+        if (is_glitching == value)
+            return;
+
         is_glitching = value;
         StartCoroutine(FadeBetweenTracks());
     }
@@ -74,7 +77,7 @@ public class MusicPlayer : MonoBehaviour, IGlitchable
     {
         float currentTime = base_music.time;
 
-        yield return new WaitForSeconds(base_music.clip.length - currentTime);
+        yield return new WaitForSecondsRealtime(base_music.clip.length - currentTime);
 
         base_music.time = base_music_restart_time;
         base_music.Play();

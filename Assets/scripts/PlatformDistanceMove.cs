@@ -13,6 +13,10 @@ public class PlatformDistanceMove : Platform
     [SerializeField]
     float wait_time = 0f;
     float current_wait_time;
+    float limit;
+    float max_movement;
+    // Modify this value to make them all go faster
+    float _speed_adjustment = 0.018f;
     bool is_waiting = false;
     bool is_going = true;
     void Start()
@@ -22,6 +26,7 @@ public class PlatformDistanceMove : Platform
         temp_target_position = target_position;
         temp_base_position = _initial_position;
 
+        limit = _speed * _movement_vector.magnitude * 0.1f;
     }
 
     void Update()
@@ -36,13 +41,17 @@ public class PlatformDistanceMove : Platform
                     is_waiting = false;
                 }
             }
-            if (!is_waiting)
+            else
             {
                 Vector3 delta = ( temp_target_position- temp_base_position);
-                transform.position += delta* _speed * Time.deltaTime;
+                max_movement = delta.magnitude * _speed * _speed_adjustment;
 
-                if ((transform.position - temp_target_position).magnitude <= 0.1f)
+                //Debug.Log();
+
+                float distance = (transform.position - temp_target_position).magnitude;
+                if (distance <= 0.1f)
                 {
+                    Debug.Log("ENTREEEEEEEE : " + distance);
                     if (wait_time > 0)
                     {
                         current_wait_time = wait_time;
@@ -88,6 +97,11 @@ public class PlatformDistanceMove : Platform
 
 
         }
+    }
+
+    private void FixedUpdate()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, temp_target_position, max_movement);
     }
 
     public override void Diminish()
