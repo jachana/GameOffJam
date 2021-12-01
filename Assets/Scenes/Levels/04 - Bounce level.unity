@@ -3310,11 +3310,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -163.54
+      value: -163.79
       objectReference: {fileID: 0}
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.34
+      value: -3.3400002
       objectReference: {fileID: 0}
     - target: {fileID: 3913503156342851060, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5572,7 +5572,7 @@ MonoBehaviour:
   _is_active: 1
   _speed: 0.8
   _offset: 0
-  _movement_vector: {x: 0, y: -7.5, z: 0}
+  _movement_vector: {x: 0, y: -9, z: 0}
   wait_time: 0.7
 --- !u!1001 &1020401845
 PrefabInstance:
@@ -10618,11 +10618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2486683691483375294, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.47
+      value: -63.97
       objectReference: {fileID: 0}
     - target: {fileID: 2486683691483375294, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.4
+      value: 10.4
       objectReference: {fileID: 0}
     - target: {fileID: 2486683691483375294, guid: b4fd31c6eb46f104bb68725d5a9e72ae, type: 3}
       propertyPath: m_LocalPosition.z

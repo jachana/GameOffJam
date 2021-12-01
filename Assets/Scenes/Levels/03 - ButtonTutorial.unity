@@ -1351,11 +1351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7396450846736781747, guid: 88bb77adc7519364c9eaa0e917204713, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.07
+      value: -37.32
       objectReference: {fileID: 0}
     - target: {fileID: 7396450846736781747, guid: 88bb77adc7519364c9eaa0e917204713, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.12
+      value: 1.8699999
       objectReference: {fileID: 0}
     - target: {fileID: 7396450846736781747, guid: 88bb77adc7519364c9eaa0e917204713, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3799,7 +3799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.42
+      value: -0.08000001
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4135,11 +4135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -84.92
+      value: -82.17
       objectReference: {fileID: 0}
     - target: {fileID: 3214325733544500213, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.5
+      value: -18.5
       objectReference: {fileID: 0}
     - target: {fileID: 4037334515179168776, guid: f3ca01ac7bf44434cbe70f819dc4095f, type: 3}
       propertyPath: size
@@ -4397,10 +4397,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _is_active: 1
-  _speed: 0.1
+  _speed: 0.25
   _offset: 1
-  _movement_vector: {x: 23, y: 0, z: 0}
-  wait_time: 0
+  _movement_vector: {x: 27, y: 0, z: 0}
+  wait_time: 0.5
 --- !u!1001 &1112994144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5297,7 +5297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.72
+      value: 12.22
       objectReference: {fileID: 0}
     - target: {fileID: 333809896269699245, guid: b92c2a089b68a0b478e5f62e03471e87, type: 3}
       propertyPath: m_LocalPosition.z
