@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Final level.unity
     guid: de3f3de412e9f5a40a7251909ff66005
+  - enabled: 1
+    path: Assets/Scenes/Levels/Win Credits.unity
+    guid: fac39870cde45404992e134539436d3d
   m_configObjects: {}
